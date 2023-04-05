@@ -1,38 +1,39 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
-  padding: 6rem;
+  /* padding: 6rem; */
   min-height: 100vh;
 }
 
 .description {
   display: inherit;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
+  padding: 2rem;
   font-family: var(--font-mono);
 }
 
-.description a {
+/* .description a {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-}
+} */
 
 .description p {
   position: relative;
   margin: 0;
-  padding: 1rem;
+  /* padding: 1rem; */
   background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+  /* border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  border-radius: var(--border-radius); */
 }
 
 .code {

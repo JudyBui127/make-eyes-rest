@@ -8,11 +8,15 @@ import Box from '@mui/material/Box';
 interface MyComponentProps {
   timeLeft: number;
   totalSeconds: number;
+  eyesOffTime: number;
+  isMainTimer: boolean;
 }
 
 const TimeProgress: React.FC<MyComponentProps> = ({ 
   timeLeft,
-  totalSeconds
+  totalSeconds,
+  eyesOffTime,
+  isMainTimer
 }) => {
   const {classes} = useStyles();
 
@@ -27,7 +31,6 @@ const TimeProgress: React.FC<MyComponentProps> = ({
     }
     return `${minutes}:${seconds}`;
   }, [timeLeft])
-  
 
   return (
     <Box className={classes.outerCircle}>
@@ -35,7 +38,7 @@ const TimeProgress: React.FC<MyComponentProps> = ({
         thickness={2}
         className={classes.progressCircle}
         variant="determinate"
-        value={(timeLeft/totalSeconds)*100} />
+        value={(timeLeft/(isMainTimer ? totalSeconds : eyesOffTime))*100} />
       <Box className={classes.innerContent}>
         <Typography
           className={classes.timeText}

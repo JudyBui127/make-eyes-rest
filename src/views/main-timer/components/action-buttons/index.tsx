@@ -7,12 +7,17 @@ import { Stack } from '@mui/material';
 import { useStyles } from './styles';
 
 interface MyComponentProps {
-  restartTimer: () => void;
+  pauseTimer: () => void;
+  startTimer: () => void;
+  resetTimer: () => void;
+  isPaused:boolean;
 }
 
-
 const ActionButtons: React.FC<MyComponentProps> = ({
-  restartTimer
+  startTimer,
+  resetTimer,
+  pauseTimer,
+  isPaused
 }) => {
   const { classes } = useStyles();
 
@@ -21,13 +26,13 @@ const ActionButtons: React.FC<MyComponentProps> = ({
       <Button 
         className={classes.button}
         variant="contained"
-        onClick={restartTimer}>
-        <PlayArrowIcon />
+        onClick={isPaused ? startTimer : pauseTimer}>
+        {isPaused ? <PlayArrowIcon /> : <PauseIcon /> }
       </Button>
       <Button 
         className={classes.button}
         variant="outlined"
-        onClick={restartTimer}>
+        onClick={resetTimer}>
         <RestartAltIcon sx={{color: "white"}}/>
       </Button>
     </Stack>

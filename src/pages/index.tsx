@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import MainTimer from '@/views/main-timer';
+import Layout from '@/common/layout';
 
 
 export default function Home() {
@@ -12,11 +13,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/eye.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <MainTimer />
-        </div>
-      </main>
+      <Layout>
+        <MainTimer />
+      </Layout>
     </>
   )
 }
