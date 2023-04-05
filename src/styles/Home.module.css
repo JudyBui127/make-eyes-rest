@@ -9,8 +9,9 @@
 
 .description {
   display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
