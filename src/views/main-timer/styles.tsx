@@ -5,7 +5,10 @@ export const useStyles = makeStyles({
 })((_theme) => ({
   container: {
     width: "300px",
-    height: "auto"
+    height: "auto",
+    display: "flex",
+    flexDirection: "column",
+    
   }
 }));
 
