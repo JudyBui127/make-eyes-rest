@@ -6,19 +6,28 @@ import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import { Stack } from '@mui/material';
 import { useStyles } from './styles';
 
-const ActionButtons = () => {
+interface MyComponentProps {
+  restartTimer: () => void;
+}
+
+
+const ActionButtons: React.FC<MyComponentProps> = ({
+  restartTimer
+}) => {
   const { classes } = useStyles();
 
   return (
     <Stack direction="row" className={classes.root}>
       <Button 
         className={classes.button}
-        variant="contained">
+        variant="contained"
+        onClick={restartTimer}>
         <PlayArrowIcon />
       </Button>
       <Button 
         className={classes.button}
-        variant="outlined">
+        variant="outlined"
+        onClick={restartTimer}>
         <RestartAltIcon sx={{color: "white"}}/>
       </Button>
     </Stack>
