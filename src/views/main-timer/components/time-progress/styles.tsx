@@ -6,7 +6,8 @@ export const useStyles = makeStyles({
 })((_theme) => ({
   outerCircle: {
     position: 'relative', 
-    display: 'inline-flex'
+    display: 'inline-flex',
+    width: "100%"
   },
 
   innerContent: {
@@ -18,5 +19,16 @@ export const useStyles = makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  progressCircle: {
+    width: "100%!important",
+    height: "auto!important"
+  },
+
+  timeText: {
+    fontFamily: 'Arial',
+    fontSize: "64px",
+    letterSpacing: "6px"
   }
 }));

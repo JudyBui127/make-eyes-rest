@@ -8,7 +8,7 @@ export default function About() {
     <>
      <Head>
         <title>About</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/eye.ico" />
       </Head>
       <div>
         Hello About

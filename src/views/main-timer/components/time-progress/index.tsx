@@ -49,10 +49,14 @@ const TimeProgress = (
 
   return (
     <Box className={classes.outerCircle}>
-      <CircularProgress variant="determinate" value={(timeLeft/TOTAL_SECONDS)*100}/>
+      <CircularProgress 
+        thickness={2}
+        className={classes.progressCircle}
+        variant="determinate"
+        value={(timeLeft/TOTAL_SECONDS)*100} />
       <Box className={classes.innerContent}>
         <Typography
-          variant="caption"
+          className={classes.timeText}
           component="div"
           color="white"
         >{formattedTimeDisplay}</Typography>

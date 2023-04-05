@@ -3,7 +3,7 @@
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace, 'Playfair Display';
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -104,4 +104,28 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url(../fonts/PlayfairDisplay-Regular.ttf) format("truetype");
+}
+
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 500;
+  src: url(../fonts/PlayfairDisplay-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 600;
+  src: url(../fonts/PlayfairDisplay-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  src: url(../fonts/PlayfairDisplay-ExtraBold.ttf) format("truetype");
 }
