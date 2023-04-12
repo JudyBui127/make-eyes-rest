@@ -14,7 +14,7 @@ export const useStyles = makeStyles({
     fontSize: "18px",
     textAlign: "center",
     lineHeight: "30px",
-    backgroundColor: "none"
+    backgroundColor: "transparent!important"
   },
 
   questionText: {

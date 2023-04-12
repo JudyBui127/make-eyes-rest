@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import NavBar from '../components/nav-bar';
 import styles from '@/styles/Home.module.css';
+import Footer from '../components/footer';
 
 
 interface MyComponentProps {
@@ -14,6 +15,7 @@ const Layout: React.FC<MyComponentProps>  = ({ children }) => {
       <div className={styles.description}>
         {children}
       </div>
+      <Footer />
     </main>
   );
 };

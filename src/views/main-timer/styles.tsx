@@ -19,7 +19,8 @@ export const useStyles = makeStyles({
     fontSize: "18px",
     color: "#E0E0E0",
     fontWeight: 500,
-    marginTop: "16px!important"
+    marginTop: "16px!important",
+    width: "max-content!important",
   }
 }));
 

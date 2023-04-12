@@ -108,8 +108,7 @@ const MainTimer = () => {
               Working time...
             </Typography>
           : <Typography className={classes.alertText}>
-              <span>Time to look up from your screen</span>
-              <span>Focus on an item approximately 20 feet away!</span>
+              <span>Time to look up from your screen, focus on an item approximately 20 feet away!</span>
             </Typography>
         }
         <ActionButtons
