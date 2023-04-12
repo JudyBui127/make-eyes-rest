@@ -1,8 +1,6 @@
 import { Stack, Typography } from '@mui/material';
 import * as React from 'react';
 import { useStyles } from './styles';
-import eyeIcon from "./eye.png";
-import Image from 'next/image';
 
 interface MyComponentProps {
 
