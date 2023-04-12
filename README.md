@@ -1,6 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Make Eyes Rest
+
+This is a web app to countdown the time you look at your screen and remind you to take a quick break. It follows the 20-20-20 rules: Every 20 minutes, look up from your screen and focus on an item approximately 20 feet away for at least 20 seconds.
 
 First, run the development server:
 
