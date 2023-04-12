@@ -5,6 +5,9 @@ import ActionButtons from "./components/action-buttons";
 import { Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import InfoText from "./components/info-text";
+import { notifyTimeUp } from "./utils";
+import StartWorkingSound from "../../assets/sounds/start-time.mp3";
+import RestSound from "../../assets/sounds/rest-time.mp3";
 
 const MINUTES = 20;
 const TOTAL_SECONDS = MINUTES*60;
@@ -16,6 +19,20 @@ const MainTimer = () => {
   const [timeLeft, setTimeLeft] = useState(TOTAL_SECONDS);
   const [isPaused, setIsPaused] = useState(true);
   const [intervalId, setIntervalId] = useState<any>(null);
+
+  const playAudio = () => {
+    if (typeof window !== 'undefined') {
+      const startAudio = new Audio(StartWorkingSound);
+      const restAudio = new Audio(RestSound);
+      if (isMainTimer){
+        console.log("rest")
+        restAudio.play();
+      } else {
+        console.log("start")
+        startAudio.play();
+      }
+    }
+  };
 
   //handler
   const countdown = () => {
@@ -52,36 +69,49 @@ const MainTimer = () => {
   useEffect(() => {
     if (timeLeft === 0) {
       if (isMainTimer) {
+        playAudio();
         setTimeLeft(EYES_OFF_TIME);
         setIsMainTimer(false);
+        notifyTimeUp();
       } else {
+        playAudio();
         setTimeLeft(TOTAL_SECONDS);
         setIsMainTimer(true);
       }
-      // clearInterval(intervalId);
       setIsPaused(false);
       setIntervalId(null);
       countdown();
     }
   }, [timeLeft, intervalId]);
+
+  useEffect(() => {
+    if (!("Notification" in window)) {
+      alert("This browser does not support Desktop notifications");
+    } else if (Notification.permission !== "denied"){
+      Notification.requestPermission();
+    }
+  },[])
   
   return (
     <Stack direction="column" spacing={6} alignItems="center">
       <Stack
         className={classes.container}
         direction="column"
-        spacing={4}>
+        spacing={3}>
         <TimeProgress
           timeLeft={timeLeft}
           totalSeconds={TOTAL_SECONDS}
           eyesOffTime={EYES_OFF_TIME}
           isMainTimer={isMainTimer} />
-        {!isMainTimer && (
-          <Typography className={classes.alertText}>
-            <span>Time to look up from your screen</span>
-            <span>Focus on an item approximately 20 feet away!</span>
-          </Typography>
-        )}
+        {isMainTimer 
+          ? <Typography className={classes.alertText}>
+              Working time...
+            </Typography>
+          : <Typography className={classes.alertText}>
+              <span>Time to look up from your screen</span>
+              <span>Focus on an item approximately 20 feet away!</span>
+            </Typography>
+        }
         <ActionButtons
           resetTimer={resetTimer}
           startTimer={startTimer}

@@ -11,8 +11,9 @@ export const useStyles = makeStyles({
     fontFamily: "Roboto",
     color: "#E0E0E0",
     fontWeight: 500,
-    fontSize: "20px",
-    textAlign: "center"
+    fontSize: "18px",
+    textAlign: "center",
+    lineHeight: "30px"
   },
 
   questionText: {

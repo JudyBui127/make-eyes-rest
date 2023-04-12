@@ -15,9 +15,11 @@ export const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    fontFamily: "Playfair Display",
+    fontFamily: "Roboto",
+    fontSize: "18px",
     color: "#E0E0E0",
     fontWeight: 500,
+    marginTop: "16px!important"
   }
 }));
 

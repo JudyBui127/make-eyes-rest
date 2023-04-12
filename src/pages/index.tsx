@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import styles from '@/styles/Home.module.css';
 import MainTimer from '@/views/main-timer';
 import Layout from '@/common/layout';
 
