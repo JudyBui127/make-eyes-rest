@@ -13,7 +13,8 @@ export const useStyles = makeStyles({
     fontWeight: 500,
     fontSize: "18px",
     textAlign: "center",
-    lineHeight: "30px"
+    lineHeight: "30px",
+    backgroundColor: "none"
   },
 
   questionText: {

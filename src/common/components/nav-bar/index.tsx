@@ -14,7 +14,7 @@ const NavBar: React.FC<MyComponentProps> = () => {
   return (
     <Stack direction="row" className={classes.root} spacing={2}>
       <Typography className={classes.headline}>
-        Make Eyes Rest
+        Rest Your Eyes
       </Typography>
       <div className={classes.icon}>
         <Image src={eyeIcon} alt="Eye icon" className={classes.image}/>
