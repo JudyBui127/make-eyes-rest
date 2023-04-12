@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 This is a web app to countdown the time you look at your screen and remind you to take a quick break. It follows the 20-20-20 rules: Every 20 minutes, look up from your screen and focus on an item approximately 20 feet away for at least 20 seconds.
 
-<img src="https://i.imgur.com/ZF0NWDT.pnge" width="500" alt="Web UI">
+<img src="https://i.imgur.com/IT8MMmu.png" width="500" alt="Web UI">
 
 First, run the development server:
 
