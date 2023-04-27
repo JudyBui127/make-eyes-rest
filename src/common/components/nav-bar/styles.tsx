@@ -18,7 +18,6 @@ export const useStyles = makeStyles({
   icon: {
     width: "40px",
     height: "40px",
-    
   },
   image: {
     width: "100%",

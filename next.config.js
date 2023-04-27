@@ -3,7 +3,7 @@ const path = require('path');
 
 const nextConfig = {
   reactStrictMode: true,
-  
+
   webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.(mp3|wav)$/i,

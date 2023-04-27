@@ -2,9 +2,12 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles({
   name: "InfoText"
-})((_theme) => ({
+})((theme) => ({
   root: {
-    width: "70%"
+    width: "70%",
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+    }
   },
   text: {
     border: "none!important",
@@ -14,12 +17,18 @@ export const useStyles = makeStyles({
     fontSize: "18px",
     textAlign: "center",
     lineHeight: "30px",
-    backgroundColor: "transparent!important"
+    backgroundColor: "transparent!important",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
+    }
   },
 
   questionText: {
     fontWeight: 700,
     fontSize: "24px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "20px",
+    }
   }
 }));
 

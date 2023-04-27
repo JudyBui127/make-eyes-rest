@@ -12,7 +12,7 @@ const Layout: React.FC<MyComponentProps>  = ({ children }) => {
   return (
     <main className={styles.main}>
       <NavBar />
-      <div className={styles.description}>
+      <div style={{margin: "40px 0px 0px"}}>
         {children}
       </div>
       <Footer />
